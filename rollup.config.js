@@ -84,16 +84,9 @@ export default [
     output: {
       sourcemap: true,
       format: "iife",
-      name: "app",
       file: "public/build/background.js",
     },
-    plugins: [
-      resolve({
-        browser: true,
-        dedupe: ["svelte"],
-      }),
-      commonjs(),
-    ],
+    plugins: [resolve(), commonjs()],
     watch: {
       clearScreen: false,
     },
@@ -103,16 +96,9 @@ export default [
     output: {
       sourcemap: true,
       format: "iife",
-      name: "app",
       file: "public/build/injection.js",
     },
-    plugins: [
-      resolve({
-        browser: true,
-        dedupe: ["svelte"],
-      }),
-      commonjs(),
-    ],
+    plugins: [resolve(), commonjs()],
     watch: {
       clearScreen: false,
     },
