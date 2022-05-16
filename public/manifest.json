@@ -1,13 +1,12 @@
 {
-  "manifest_version": 2,
-  "name": "Svelte-made Browser Extension",
+  "manifest_version": 3,
+  "name": "Liberate - 0L Browser Extension Wallet ",
   "version": "1.0.0",
-  "permissions": ["storage"],
+  "host_permissions": ["storage"],
   "background": {
-    "scripts": ["build/background.js"],
-    "persistent": false
+    "service_worker": "build/background.js"
   },
-  "browser_action": {
+  "action": {
     "default_popup": "index.html"
   },
   "content_scripts": [
